@@ -4,6 +4,40 @@ import axios from 'axios';
 import CollegeItem from './CollegeItem'
 
 const Search = () => {
+  // const resultData={
+  //   [
+  //     {
+  //       "Collegename":"I.E.T CAMPUS", 
+  //       "Address1":"SITAPUR  ROAD", 
+  //       "address2"LUCKNOW", 
+  //       "Uttar Pradesh Technical University, Lucknow"
+  //     },
+  //     {
+  //       "DD-26,Sector-I,Salt Lake City", 
+  //       NaN, 
+  //       "Kolkata", 
+  //       "Netaji Subhash Open University, Kolkata"
+  //     }, 
+  //     {
+  //       "Nirma University, S. G. Highway", 
+  //       "Ahmedabad, Gujarat, PIN-382481", 
+  //       "Ahmedabad", 
+  //       "Nirma University, Ahmedabad"
+  //     }, 
+  //     {
+  //       "AES BUNGLOW 3", 
+  //       "COMMERCE SIX ROADS, NAVANGPURA", 
+  //       "AHMEDABAD", 
+  //       "Ahmedabad University"
+  //     }, 
+  //     {
+  //       "Navsari Agricultural University,", 
+  //       "Eru Char Rasta,  At & Po Eru  Ta- Jalalpore", 
+  //       "Navsari  396 450", 
+  //       "Navsari Agricultural University"
+  //     }
+  //   ]
+  // }
     const [filterData, setFilterData] = useState({})
     const [resData,setResData]=useState({});
     const [has_depart_reg, setIsDepat_reg] = useState(false);
@@ -121,7 +155,6 @@ const Search = () => {
     }
     const handleOnChange = () => {
         setIsDepat_reg(!has_depart_reg);
-        setIsFacReg(!has_fac_reg);
       };
 
       const handleOnChange_has_fac = () => {
