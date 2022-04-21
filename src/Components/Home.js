@@ -3,12 +3,49 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import CountUp from 'react-countup';
 import Map from './Map';
+import axios from 'axios';
 
-
-const Home = () => 
+const Home =   () => 
 {
+   function test(){
+    console.log('inside fun')
+      axios.post("http://192.168.35.73:5001/", 
+  {
+      "has_department_regular_courses":0, "has_faculty_regular_courses":0, 
+      "has_fellowship":1,
+      "has_other_minority_data":0,
+      "has_other_regular_courses":0,
+      "is_accredited":0,
+      "is_foreign_students_enrolled":0,
+      "no_of_student_hostel":0,
+      "offers_distance_programme":0,
+      "offers_loan":0,
+      "offers_scholarship":0,
+      "specialized":0,
+      "student_hostel_available":0,
+      "year_of_establishment":0,
+      "college_building":0,
+      "library":0,
+      "laboratory":0,
+      "playground":0,
+      "stu_is_tech_ratio": "0","n":5
+    },{
+      headers: {
+        "Access-Control-Allow-Origin": "*"
+      }
+    })
+    .then(response=>{
+      console.log(response.data)
+
+      
+      
     
    
+  }) 
+  }
+
+  test()
+     
   return (
     <>
       

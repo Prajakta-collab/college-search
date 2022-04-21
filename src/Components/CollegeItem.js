@@ -1,25 +1,27 @@
-import React from 'react'
+import React from 'react';
 
-const CollegeItem = () => {
+
+const CollegeItem = (collegeData) => {
+  console.log("collegeData",collegeData);
   return (
-    <div>
-    <div className="col-md-3 ">
+    <div className="col-6">
     <div className="card my-3" >
 
 <div className="card-body">
-<h5 className="card-title ">collge name</h5>
-<p className="card-text">address_line1 </p>
-<p className="card-text">address_line2/</p>
-<p className="card-text">address _line2 </p>
-<p className="card-text"> city</p>
+<h5 className="card-title " style={{background:'#A9A9A9	'}}>
+College Name : {collegeData.collegeData.college}</h5>
+<p className="card-text">city:{collegeData.collegeData.city}</p>
+<p className="card-text">address:{collegeData.collegeData.address1} </p>
+<p className="card-text">address:{collegeData.collegeData.address2} </p>
 
-<p className="card-text"> website</p>
-<a href='#'></a>
+
 
 </div>
 </div>
 </div>
-</div>
+
+
+
   )
 }
 

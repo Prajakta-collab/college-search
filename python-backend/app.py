@@ -127,14 +127,38 @@ def home():
             simp.append(temp[11])
             resultList.append(simp)
 
-        print(resultList)
+        ans  = []
+
+        # for  i in range(len(resultList)):
+        #     ans.append( [
+        #          resultList[i][0],
+        #          resultList[i][1],
+        #          resultList[i][2],
+        #         resultList[i][3]
+        #     ])
+        for  i in range(len(resultList)):
+            ans.append( {
+                "address1": resultList[i][0],
+                "address2": resultList[i][1],
+                "city": resultList[i][2],
+                "college": resultList[i][3]
+            })            
+        # ans = []
+
+        # for  i in resultList:
+        #     ans.append(i)
+
+        print(ans)
 
         
-            
-        
-        
 
-        return jsonify(resultList)
+        
+        return jsonify(ans)
+
+
+        # return jsonify({
+        #     "result": ans
+        # })
 
 
     
